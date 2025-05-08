@@ -168,8 +168,8 @@ body {
   text-align: center;
   min-height: 100vh;           /* Full screen height */
   padding: 2rem;
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLpQ6KcR8ro04Za2fApH6AySnOS-2pRZ309YGvu3qXkIcMGqH42uzUr0xZ1YN7x4TMb4Q&usqp=CAU') no-repeat center center/cover;
-  color: white;                /* Or whatever contrasts with your background */
+  background: url('') no-repeat center center/cover;
+  color: rgb(160, 157, 157);                /* Or whatever contrasts with your background */
 }
 
 .hero .container {
