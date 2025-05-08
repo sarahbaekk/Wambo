@@ -176,3 +176,7 @@ body {
   max-width: 600px;
   width: 100%;
 }
+.emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
