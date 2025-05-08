@@ -144,3 +144,35 @@ body {
   margin-top: 40px;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: column; /* Stack items on small screens */
+  justify-content: center; /* Vertical center */
+  align-items: center;     /* Horizontal center */
+  text-align: center;
+  min-height: 100vh;       /* Full viewport height */
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .flex-row {
+    flex-direction: row;    /* Side-by-side on larger screens */
+    justify-content: space-around;
+    text-align: left;
+  }
+}
+.hero {
+  display: flex;
+  justify-content: center;     /* Horizontally center */
+  align-items: center;         /* Vertically center */
+  text-align: center;
+  min-height: 100vh;           /* Full screen height */
+  padding: 2rem;
+  background: url('your-image.jpg') no-repeat center center/cover;
+  color: white;                /* Or whatever contrasts with your background */
+}
+
+.hero .container {
+  max-width: 600px;
+  width: 100%;
+}
