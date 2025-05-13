@@ -1,46 +1,50 @@
-// Toggle navigation menu on mobile
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
+document.addEventListener("DOMContentLoaded", () => {
+  // 🔁 Move ALL your existing JS into this block
 
-navToggle.addEventListener('click', () => {
-  navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-});
+  // Toggle navigation menu on mobile
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
 
-// Dynamic hero title
-const heroTitle = document.getElementById('heroTitle');
-const titles = [
-  'Reliable Pet Care at Your Fingertips',
-  'Your Pet’s New Best Friend',
-  'Trusted Walkers in Your Neighborhood'
-];
-let index = 0;
+  navToggle.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  });
 
-setInterval(() => {
-  index = (index + 1) % titles.length;
-  heroTitle.textContent = titles[index];
-}, 5000);
+  // Dynamic hero title
+  const heroTitle = document.getElementById('heroTitle');
+  const titles = [
+    'Reliable Pet Care at Your Fingertips',
+    'Your Pet’s New Best Friend',
+    'Trusted Walkers in Your Neighborhood'
+  ];
+  let index = 0;
 
-// Handle signup form submission
-const signupForm = document.getElementById("signupForm");
+  setInterval(() => {
+    index = (index + 1) % titles.length;
+    heroTitle.textContent = titles[index];
+  }, 5000);
 
-signupForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const userEmail = document.getElementById("email").value;
+  // ✨ Signup form logic
+  const signupForm = document.getElementById("signupForm");
 
-  fetch("https://wambobe-production.up.railway.app/signup", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email: userEmail }),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("✅ Signup successful:", data);
-      alert("Thank you for signing up!");
+  signupForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const userEmail = document.getElementById("email").value;
+
+    fetch("https://wambobe-production.up.railway.app/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: userEmail }),
     })
-    .catch((err) => {
-      console.error("❌ Error submitting form:", err);
-      alert("Something went wrong. Please try again.");
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("✅ Signup successful:", data);
+        alert("Thank you for signing up!");
+      })
+      .catch((err) => {
+        console.error("❌ Error submitting form:", err);
+        alert("Something went wrong. Please try again.");
+      });
+  });
 });
