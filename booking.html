@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wambo Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Wambo Booking</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="booking-section">
+        <h2>Book a Service</h2>
+        <form id="booking-form">
+          <label for="service">Service</label>
+          <select id="service" required>
+            <option value="">Select</option>
+            <option value="dog-walking">Dog Walking</option>
+            <option value="pet-sitting">Pet Sitting</option>
+            <option value="pet-sitting">Pet Exchange</option>
+            <option value="drop-ins">Drop-ins</option>
+            <option value="events">Events</option>
+          </select>
+
+          <label for="date">Date</label>
+          <input type="date" id="date" required />
+
+          <label for="time">Time</label>
+          <input type="time" id="time" required />
+
+          <!-- <label for="zip">Zip Code</label>
+          <input type="text" id="zip" maxlength="5" required /> -->
+
+          <!-- <button type="submit" class="btn">Book Now</button> -->
+        </form>
+      </section>
+
+      <section class="payment-section">
+        <h2>Payment Info</h2>
+        <form id="payment-form">
+          <label for="card">Card Number</label>
+          <input
+            type="text"
+            id="card"
+            maxlength="16"
+            placeholder="1234 5678 9012 3456"
+            required
+          />
+
+          <label for="exp">Expiration Date</label>
+          <input
+            type="text"
+            id="exp"
+            maxlength="5"
+            placeholder="MM/YY"
+            required
+          />
+
+          <label for="cvc">CVC</label>
+          <input
+            type="text"
+            id="cvc"
+            maxlength="3"
+            placeholder="123"
+            required
+          />
+
+          <button type="submit" class="btn">Confirm Payment</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

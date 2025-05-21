@@ -52,3 +52,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// script.js
+
+// Only run if booking form exists
+const bookingForm = document.getElementById("booking-form");
+if (bookingForm) {
+  bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    // collect form data if needed
+    window.location.href = "confirmation.html";
+  });
+}
+
+// Only run if payment form exists
+const paymentForm = document.getElementById("payment-form");
+if (paymentForm) {
+  paymentForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    // payment logic can go here
+    window.location.href = "confirmation.html";
+  });
+}
+

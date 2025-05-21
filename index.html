@@ -6,7 +6,7 @@
     <title>Wambo!</title>
     <link rel="stylesheet" href="styles.css" />
 
-    <script
+    <script     
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-1F5V98CJJT"
     ></script>
@@ -33,72 +33,88 @@
       </div>
     </header>
 
-    <section class="hero">
-      <div class="container">
-        <div class="emoji">🐱👩‍🦰🐶</div>
-        <h2>Your Pet's New Best Girlie</h2>
-        <p>
-          Female-led dog walking, pet sitting, boarding services and more –
-          exclusively for women!
-        </p>
-        <button onclick="handleCTA()">Get Started</button>
-      </div>
-    </section>
+<section class="hero">
+  <div class="container">
+    <div class="emoji">🐱🐶</div>
+    <h2>Your Pet's New Best Friend</h2>
+    <p>Dog walking, pet sitting, care exchange, and community events</p>
+    <button onclick="handleCTA()">Get Started</button>
 
+    <!-- Services Boxes Section Starts Here; inside hero -->
     <section id="services" class="services">
       <div class="container">
         <h2>Our Services</h2>
+        
         <div class="service-boxes">
-          <div class="service-box">
-            <h3>Dog Walking</h3>
-            <p>Daily walks tailored to your pup’s needs.</p>
-          </div>
-          <div class="service-box">
-            <h3>Pet Sitting</h3>
-            <p>
-              Care in your home or at your sitter’s place for all types of pets.
-            </p>
-          </div>
-          <div class="service-box">
-            <h3>Pet Boarding</h3>
-            <p>
-              Overnight stays with trusted caregivers.Your love is safe with us.
-            </p>
-          </div>
-          <div class="service-box">
-            <h3>Drop Ins</h3>
-            <p>Quick visits to check in, feed, and play with your pet.</p>
-          </div>
-          <div class="service-box">
-            <h3>Events</h3>
-            <p>
-              Find your girl gang! Join dog-friendly events and meetups in your
-              area.
-            </p>
-          </div>
+          <a href="dog-walking.html" class="service-link">
+            <div class="service-box">
+              <h3>Dog Walking</h3>
+              <p>Daily walks tailored to your pup’s needs.</p>
+            </div>
+          </a>
+          <a href="pet-sitting.html" class="service-link">
+            <div class="service-box">
+              <h3>Pet Sitting</h3>
+              <p>
+                Care in your home or at your sitter’s place for all types of
+                pets.
+              </p>
+            </div>
+          </a>
+          <a href="pet-exchange.html" class="service-link">
+            <div class="service-box">
+              <h3>Pet Exchange</h3>
+              <p>Exchange pets for low cost alternative.</p>
+            </div>
+          </a>
+          <a href="drop-ins.html" class="service-link">
+            <div class="service-box">
+              <h3>Drop Ins</h3>
+              <p>Quick visits to check in, feed, and play with your pet.</p>
+            </div>
+          </a>
+          <a href="events.html" class="service-link">
+            <div class="service-box">
+              <h3>Events</h3>
+              <p>
+                Find your girl gang! Join dog-friendly events and meetups in
+                your area.
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
+  </section>
+
+ <!-- Booking form embedded inside hero -->
+
+  <section class="booking">
+    <form id="hero-booking-form" class="hero-booking-form">
+      <h3>Quick Book a Service</h3>
+      
+      <select id="hero-service" required>
+        <option value="">Select a Service</option>
+        <option value="dog-walking">Dog Walking</option>
+        <option value="pet-sitting">Pet Sitting</option>
+        <option value="drop-ins">Drop-ins</option>
+        <option value="events">Events</option>
+      </select>
+
+      <input type="date" id="hero-date" required />
+      <input type="time" id="hero-time" required />
+      <input type="text" id="hero-zip" maxlength="5" placeholder="Zip Code" required />
+
+      <button type="submit" class="btn">Book Now</button>
+    </form>
+
+  </section>
+    <!--  Services Section Ends Here -->
 
     <section class="card-wrapper">
       <div class="thin-wide-card">
-        <h3>Get a free digital sticker of your pooch on your first sign up!</h3>
-        <a href="#services" class="btn-thin">Click here</a>
-      </div>
-    </section>
-    <section class="signup-section">
-      <div class="container">
-        <h3>Stay in the loop! Sign up below:</h3>
-        <form id="signupForm">
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-            style="padding: 10px; width: 250px; margin-right: 10px"
-          />
-          <button type="submit" style="padding: 10px 20px">Sign Up</button>
-        </form>
+        <h3>Match your pooch with a compatible buddy</h3>
+        <a href="match.html" class="btn-thin">Click here</a>
       </div>
     </section>
 
